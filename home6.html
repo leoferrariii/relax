@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://cdn.discordapp.com/attachments/772813148214132756/1332675805259497604/pngwing.com.png?ex=67961e8f&is=6794cd0f&hm=3c133bd9f7a52379bdc7eac4b3943f2c42894c096cfffc9b3544a35c9b2435da&">
+    <title>reLax Snack - La tua pausa reinventata</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+
+        /* Definizione della palette di colori */
+        :root {
+            --light-beige: #f8f3e7; /* Beige chiaro */
+            --medium-beige: #e2cfc4; /* Beige medio */
+            --dark-beige: #c8a78e; /* Beige scuro */
+            --brown: #8b5e34; /* Marrone caldo */
+            --dark-brown: #5c3b1e; /* Marrone scuro */
+            --orange: #ff7f32; /* Arancione */
+            --dark-orange: #e55a2f; /* Arancione scuro */
+            --red: #d24d57; /* Rosso caldo */
+            --yellow: #f1c40f; /* Giallo caldo */
+            --white: #ffffff; /* Bianco */
+            --shadow: rgba(0, 0, 0, 0.15); /* Ombra più leggera per profondità */
+        }
+
+        /* Impostazioni di base */
+        body {
+            font-family: 'Comfortaa', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-beige);
+            color: var(--dark-brown);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            overflow-x: hidden; /* Previene lo scroll orizzontale */
+        }
+
+        /* Header */
+        header {
+            background-color: var(--dark-orange);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 6px 10px var(--shadow);
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+    margin: 0;
+    font-size: 4em; /* Font più grande */
+    font-weight: 900; /* Font molto più marcato */
+    color: var(--light-beige); /* Colore accattivante */
+    text-shadow: 2px 2px 5px var(--dark-brown), 0 0 10px var(--orange); /* Ombre per maggiore profondità */
+    text-transform: uppercase; /* Testo in maiuscolo */
+    letter-spacing: 3px; /* Spaziatura tra le lettere */
+    position: relative;
+}
+
+header h1::after {
+    content: '';
+    display: block;
+    width: 80px; /* Lunghezza della linea decorativa */
+    height: 6px; /* Spessore della linea */
+    background-color: var(--red); /* Colore della linea */
+    margin: 15px auto 0; /* Margine sopra e sotto */
+    border-radius: 5px; /* Angoli arrotondati */
+}
+
+        /* Navigazione */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: var(--dark-orange);
+            padding: 15px 0;
+            border-radius: 20px;
+            margin: 10px auto;
+            max-width: 90%;
+            box-shadow: 0 4px 6px var(--shadow);
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 500;
+            font-size: 1.2em;
+            padding: 10px 15px;
+            border-radius: 15px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--yellow);
+            color: var(--dark-brown);
+        }
+
+        /* Sezione Hero */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: var(--red);
+            color: var(--white);
+            border-radius: 25px;
+            margin: 30px auto;
+            max-width: 90%;
+            box-shadow: 0 6px 10px var(--shadow);
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .hero button {
+            background-color: var(--yellow);
+            color: var(--white);
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: background-color 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: var(--orange);
+        }
+
+        /* Sezione */
+        .section {
+            padding: 50px 30px;
+            text-align: center;
+            background-color: var(--white);
+            border-radius: 30px;
+            margin: 30px auto;
+            max-width: 90%;
+            box-shadow: 0 6px 10px var(--shadow);
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .section h3 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .section p {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+
+        /* Shop */
+        .shop {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 30px;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .shop-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            padding: 25px;
+            background-color: var(--medium-beige);
+            border-radius: 20px;
+            box-shadow: 0 6px 10px var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .shop-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px var(--shadow);
+        }
+
+        .shop-item img {
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .shop-item h4 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .shop-item button {
+            background-color: var(--dark-brown);
+            color: var(--white);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+
+        .shop-item button:hover {
+            background-color: var(--orange);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-orange);
+            color: var(--white);
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            border-radius: 25px 25px 0 0;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        /* Animazione di dissolvenza */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsività per schermi più piccoli */
+        @media (max-width: 900px) {
+            .shop {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .shop {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            .hero h2 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            .hero button {
+                padding: 12px 25px;
+                font-size: 1.1em;
+            }
+
+            .section h3 {
+                font-size: 1.8em;
+            }
+
+            .shop-item h4 {
+                font-size: 1.3em;
+            }
+
+            .shop-item button {
+                font-size: 1em;
+            }
+        }
+
+        #about-us h3 {
+    font-size: 2.5em; /* Dimensione maggiore per il titolo */
+    font-weight: 700; /* Grassetto per maggiore impatto */
+    color: var(--dark-orange); /* Colore accattivante */
+    text-transform: uppercase; /* Testo in maiuscolo */
+    letter-spacing: 2px; /* Spaziatura tra le lettere */
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#about-us h3::after {
+    content: '';
+    display: block;
+    width: 60px; /* Lunghezza della linea decorativa */
+    height: 5px; /* Spessore della linea */
+    background-color: var(--yellow); /* Colore della linea */
+    margin: 10px auto 0; /* Margine sopra e sotto */
+    border-radius: 5px; /* Angoli arrotondati */
+}
+
+.section-divider {
+    text-align: center;
+    margin: 50px auto 30px;
+    padding: 20px;
+    background-color: var(--medium-beige);
+    border-radius: 30px;
+    box-shadow: 0 6px 10px var(--shadow);
+    width: 90%;
+    max-width: 1200px;
+}
+
+.section-divider h3 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--dark-brown);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+    </style>
+</head>
+<body>
+    <header class="fade-in">
+        <h1>reLax Snack</h1>
+        <p>La tua pausa, reinventata</p>
+    </header>
+
+    <nav class="fade-in">
+        <a href="#mission">La nostra Missione</a>
+        <a href="#shop">Shop</a>
+        <a href="#about-us">Chi siamo</a>
+    </nav>
+
+    <section class="hero fade-in" id="product">
+        <h2>Benvenuti in reLax Snack</h2>
+        <p>Scopri il gusto croccante e il reLax naturale con il nostro snack salato e innovativo.</p>
+    </section>
+
+    <section class="section" id="mission">
+        <h3>La nostra Missione</h3>
+        <p>Il nostro obiettivo è offrire snack sani, gustosi e rilassanti per tutti i momenti della tua giornata.</p>
+    </section>
+
+    <div class="section-divider" id="shop">
+        <h3>Shop</h3>
+    </div>
+
+    <section class="shop">
+        <div class="shop-item fade-in">
+            <img src="https://cdn.discordapp.com/attachments/772813148214132756/1332727369823158282/Farina-di-ceci-removebg-preview.png?ex=67964e95&is=6794fd15&hm=2c05125801470f4814165c2f48bb5758f9035699c9cfb2c111b17486477e0b2f&" alt="Farina di Ceci">
+            <h4>reLax Snack - Farina di Ceci</h4>
+            <p>Snack croccante con farina di ceci (20% CBD).</p>
+        </div>
+        <div class="shop-item fade-in">
+            <img src="https://cdn.discordapp.com/attachments/772813148214132756/1332723637878394990/images__1_-removebg-preview.png?ex=67964b1c&is=6794f99c&hm=85b0e435b37b05c721b108dafb54f9b25fadfc22327952f6448ffd69513882f4&" alt="Curry e Zenzero">
+            <h4>reLax Snack - Curry e Zenzero</h4>
+            <p>Il calore del curry con la freschezza dello zenzero (10% CBD).</p>
+        </div>
+        <div class="shop-item fade-in">
+            <img src="https://cdn.discordapp.com/attachments/772813148214132756/1332723638193098832/images-removebg-preview.png?ex=67964b1c&is=6794f99c&hm=f7076692bf635d355e054600c6dffa32e520c34d7bfbf5423af78d14a6cada7c&" alt="Tartufo Nero">
+            <h4>reLax Snack - Tartufo Nero</h4>
+            <p>Un tocco di lusso con il tartufo nero (15% CBD).</p>
+        </div>
+        <div class="shop-item fade-in">
+            <img src="https://cdn.discordapp.com/attachments/772813148214132756/1332745198429667501/pngegg.png?ex=67965f30&is=67950db0&hm=d64f58f33a240d94cb2f545a156f0413938a9736bfa3ad3e65e138bce0b4aec6&" alt="Spezie Orientali">
+            <h4>reLax Snack - Spezie Orientali</h4>
+            <p>Un mix di spezie orientali (12% CBD).</p>
+        </div>
+        <div class="shop-item fade-in">
+            <img src="https://cdn.discordapp.com/attachments/772813148214132756/1332723638826176572/png-clipart-green-leaf-leaf-plant-basil-basil-leaf-plant-thumbnail-removebg-preview.png?ex=67964b1c&is=6794f99c&hm=832d5f0f8a77ac33e68733a1927557e3735d994882870dd831bd3886bfa841d7&" alt="Basilico">
+            <h4>reLax Snack - Basilico</h4>
+            <p>Un tocco di freschezza con basilico (15% CBD).</p>
+        </div>
+        <div class="shop-item fade-in">
+            <img src="https://cdn.discordapp.com/attachments/772813148214132756/1332723639128428554/png-clipart-green-plant-rosemary-herb-mediterranean-cuisine-spice-vegetable-herbs-soup-food-thumbnail-removebg-preview.png?ex=67964b1c&is=6794f99c&hm=b19e3b28ef3c24372817052d902b0caca1f5e2ba943cd23f4b1ec95e40f2376f&" alt="Rosmarino">
+            <h4>reLax Snack - Rosmarino</h4>
+            <p>Snack con rosmarino (10% CBD).</p>
+        </div>
+        <div class="shop-item fade-in">
+            <img src="https://cdn.discordapp.com/attachments/772813148214132756/1332723639421763614/png-clipart-lemon-lemon-removebg-preview.png?ex=67964b1c&is=6794f99c&hm=64f54d829c740228e4407289eb5fc78eddbfa05e1ce4bf5374759433c1d4281b&" alt="Limone">
+            <h4>reLax Snack - Limone</h4>
+            <p>Il gusto fresco del limone (5% CBD).</p>
+        </div>
+        <div class="shop-item fade-in">
+            <img src="https://cdn.discordapp.com/attachments/772813148214132756/1332723704458776728/png-clipart-black-garlic-food-ajos-pedronete-vegetarian-cuisine-garlic-food-recipe-thumbnail-removebg-preview.png?ex=67964b2b&is=6794f9ab&hm=18b00da0e0b8a08079d878b8363f2db795a9bc4cf318331ec0dcfb350a3cb4d6&" alt="Aglio">
+            <h4>reLax Snack - Aglio</h4>
+            <p>Snack con aglio (12% CBD).</p>
+        </div>
+        <div class="shop-item fade-in">
+            <img src="https://cdn.discordapp.com/attachments/772813148214132756/1332725412006203587/vecteezy_red-chilli-pepper-isolated-on-background-illustration_10879979.png?ex=67964cc3&is=6794fb43&hm=9cef9db6dc9193c0b4009004de5c56dabc63ef08d722eef4436e1abc843d435d&" alt="Peperoncino">
+            <h4>reLax Snack - Peperoncino</h4>
+            <p>Il piccante peperoncino (10% CBD).</p>
+        </div>
+    </section>
+
+</section> <!-- Fine shop -->
+    
+<section class="section" id="about-us">
+    <h3><b>Chi siamo</b></h3>
+    <p>reLax Snack nasce dalla passione per l'innovazione alimentare e il benessere. 
+       Il nostro team è composto da esperti del settore alimentare e appassionati di uno stile di vita sano. 
+       L'obiettivo è offrire snack che non solo siano gustosi, ma che aiutino anche a rilassarsi e godersi ogni momento della giornata.</p>
+    <p>Utilizziamo ingredienti di alta qualità, selezionati con cura, per garantire il massimo gusto e benefici. 
+       La nostra missione è reinventare la pausa, rendendola un'esperienza unica e appagante.</p>
+</section>
+
+    <footer>
+        <p>&copy; 2025 reLax Snack. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script>
+        // Aggiungi un listener per lo scroll
+        window.addEventListener('scroll', checkVisibility);
+
+        // Controlla la visibilità all'avvio
+        document.addEventListener('DOMContentLoaded', checkVisibility);
+
+        function checkVisibility() {
+            const elements = document.querySelectorAll('.fade-in');
+            const windowHeight = window.innerHeight;
+            const scrollY = window.scrollY;
+
+            elements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top + rect.height / 2 < windowHeight + scrollY) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
